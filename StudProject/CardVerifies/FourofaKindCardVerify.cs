@@ -4,6 +4,9 @@ using StudProject.Models;
 
 namespace StudProject.CardVerifies
 {
+    /// <summary>
+    /// 鐵支
+    /// </summary>
     public class FourOfaKindCardVerify : BaseCardVerify
     {
         public FourOfaKindCardVerify(VerifyModel verify) : base(verify) { }

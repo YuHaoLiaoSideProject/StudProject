@@ -2,6 +2,9 @@
 
 namespace StudProject.CardVerifies
 {
+    /// <summary>
+    /// 雙對子
+    /// </summary>
     public class TwoPairsCardVerify : BaseCardVerify
     {
         public TwoPairsCardVerify(VerifyModel verify) : base(verify) { }
