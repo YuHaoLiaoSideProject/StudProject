@@ -6,7 +6,7 @@ namespace StudProject.CardVerifies
     public abstract class BaseCardVerify
     {
         protected List<CardModel> _Cards;
-        protected Dictionary<string, int> _CardCount;
+        protected Dictionary<CardEnum, int> _CardCount;
         protected Dictionary<CardTypeEnum, int> _TypeCount;
         public BaseCardVerify(VerifyModel verify)
         {

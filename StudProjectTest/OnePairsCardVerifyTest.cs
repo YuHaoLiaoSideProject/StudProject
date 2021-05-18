@@ -14,11 +14,11 @@ namespace StudProjectTest
         {
             List<CardModel> cards = new List<CardModel>
             {
-                new CardModel{ Type = CardTypeEnum.Club,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Diamond,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Heart,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Spade,Value = "K"},
-                new CardModel{ Type = CardTypeEnum.Club,Value = "J"},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value = CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.K},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.J},
             };
             VerifyModel verify = cards.GetVerifyModel();
             bool isValidate = new OnePairsCardVerify(verify).IsValidate();
@@ -29,11 +29,11 @@ namespace StudProjectTest
         {
             List<CardModel> cards = new List<CardModel>
             {
-                new CardModel{ Type = CardTypeEnum.Club,Value = "2"},
-                new CardModel{ Type = CardTypeEnum.Diamond,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Heart,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Spade,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Two},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value = CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.A},
             };
             VerifyModel verify = cards.GetVerifyModel();
             bool isValidate = new OnePairsCardVerify(verify).IsValidate();
@@ -45,11 +45,11 @@ namespace StudProjectTest
         {
             List<CardModel> cards = new List<CardModel>
             {
-                new CardModel{ Type = CardTypeEnum.Club,Value = "2"},
-                new CardModel{ Type = CardTypeEnum.Diamond,Value = "2"},
-                new CardModel{ Type = CardTypeEnum.Heart,Value = "K"},
-                new CardModel{ Type = CardTypeEnum.Spade,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Two},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value =CardEnum.Two},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.K},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.A},
             };
             VerifyModel verify = cards.GetVerifyModel();
             bool isValidate = new OnePairsCardVerify(verify).IsValidate();

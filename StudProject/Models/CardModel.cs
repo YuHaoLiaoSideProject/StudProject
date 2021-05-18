@@ -3,6 +3,6 @@
     public class CardModel
     {
         public CardTypeEnum Type { get; set; }
-        public string Value { get; set; }
+        public CardEnum Value { get; set; }
     }
 }

@@ -14,26 +14,42 @@ namespace StudProjectTest
         {
             List<CardModel> cards = new List<CardModel>
             {
-                new CardModel{ Type = CardTypeEnum.Club,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Diamond,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Heart,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Spade,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value =CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.A},
             };
             VerifyModel verify = cards.GetVerifyModel();
             bool isValidate = new FullHouseCardVerify(verify).IsValidate();
             Assert.IsTrue(isValidate);
         }
         [TestMethod]
-        public void 不是葫蘆()
+        public void 不是葫蘆是三條()
         {
             List<CardModel> cards = new List<CardModel>
             {
-                new CardModel{ Type = CardTypeEnum.Club,Value = "2"},
-                new CardModel{ Type = CardTypeEnum.Diamond,Value = "3"},
-                new CardModel{ Type = CardTypeEnum.Heart,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Spade,Value = "A"},
-                new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Two},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value = CardEnum.Three},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.A},
+            };
+            VerifyModel verify = cards.GetVerifyModel();
+            bool isValidate = new FullHouseCardVerify(verify).IsValidate();
+            Assert.IsFalse(isValidate);
+        }
+
+        [TestMethod]
+        public void 不是葫蘆是鐵支()
+        {
+            List<CardModel> cards = new List<CardModel>
+            {
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.Two},
+                new CardModel{ Type = CardTypeEnum.Diamond,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Heart,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Spade,Value = CardEnum.A},
+                new CardModel{ Type = CardTypeEnum.Club,Value = CardEnum.A},
             };
             VerifyModel verify = cards.GetVerifyModel();
             bool isValidate = new FullHouseCardVerify(verify).IsValidate();

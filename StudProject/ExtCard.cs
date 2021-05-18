@@ -8,7 +8,7 @@ namespace StudProject
     {
         public static VerifyModel GetVerifyModel(this List<CardModel> cards)
         {
-            Dictionary<string, int> cardCount =
+            Dictionary<CardEnum, int> cardCount =
                 cards.GroupBy(e => e.Value)
                 .ToDictionary(e => e.Key, e => e.Count());
 
