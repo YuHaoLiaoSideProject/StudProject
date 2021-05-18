@@ -12,7 +12,4 @@ namespace StudProject.CardVerifies
             return _CardCount.Values.IsContainTimes(quantity: 2, frequency: 2);
         }
     }
-
-
-
 }
