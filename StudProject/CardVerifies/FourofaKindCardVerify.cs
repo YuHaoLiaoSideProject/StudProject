@@ -4,9 +4,9 @@ using StudProject.Models;
 
 namespace StudProject.CardVerifies
 {
-    public class FourofaKindCardVerify : BaseCardVerify
+    public class FourOfaKindCardVerify : BaseCardVerify
     {
-        public FourofaKindCardVerify(VerifyModel verify) : base(verify) { }
+        public FourOfaKindCardVerify(VerifyModel verify) : base(verify) { }
 
         public override bool IsValidate()
         {

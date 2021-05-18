@@ -7,7 +7,7 @@ using StudProject.Models;
 namespace StudProjectTest
 {
     [TestClass]
-    public class FourofaKindCardVerifyTest
+    public class FourOfaKindCardVerifyTest
     {
         [TestMethod]
         public void 鐵支()
@@ -21,7 +21,7 @@ namespace StudProjectTest
                 new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
             };
             VerifyModel verify = cards.GetVerifyModel();
-            bool isValidate = new FourofaKindCardVerify(verify).IsValidate();
+            bool isValidate = new FourOfaKindCardVerify(verify).IsValidate();
             Assert.IsTrue(isValidate);
         }
         [TestMethod]
@@ -36,7 +36,7 @@ namespace StudProjectTest
                 new CardModel{ Type = CardTypeEnum.Club,Value = "A"},
             };
             VerifyModel verify = cards.GetVerifyModel();
-            bool isValidate = new FourofaKindCardVerify(verify).IsValidate();
+            bool isValidate = new FourOfaKindCardVerify(verify).IsValidate();
             Assert.IsFalse(isValidate);
         }
     }
