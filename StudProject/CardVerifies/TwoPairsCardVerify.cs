@@ -12,7 +12,7 @@ namespace StudProject.CardVerifies
         public override bool IsValidate()
         {
             //篩選數量為２的資料且兩組
-            return _CardCount.Values.IsContainTimes(quantity: 2, frequency: 2);
+            return _CardCount.Values.IsContainTimes(value: 2, frequency: 2);
         }
     }
 }

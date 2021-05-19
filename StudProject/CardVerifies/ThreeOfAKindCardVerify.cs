@@ -13,7 +13,7 @@ namespace StudProject.CardVerifies
 
         public override bool IsValidate()
         {
-            return _CardCount.Values.Contains(3) && _CardCount.Values.IsContainTimes(quantity: 1, frequency: 2);
+            return _CardCount.Values.Contains(3) && _CardCount.Values.IsContainTimes(value: 1, frequency: 2);
         }
     }
 }
